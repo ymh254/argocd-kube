@@ -1,4 +1,3 @@
-vi deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,5 +13,5 @@ spec:
         run: argocd-kube
     spec:
       containers:
-      - image: 
+      - image:
         name: argocd-kube
