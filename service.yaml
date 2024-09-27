@@ -1,0 +1,14 @@
+vi service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: argocd-kube-svc
+spec:
+  ports:
+  - port: 8088
+    targetPort: 80
+  selector:
+    run: argocd-kube
+  type: LoadBalancer
+  externalIPs:
+    - 10.178.0.5
